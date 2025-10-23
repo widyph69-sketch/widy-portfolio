@@ -5,19 +5,23 @@ toggle.addEventListener('click', () => {
   toggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
 });
 
-// 🖋️ Typing Effect
+// 🖋️ Typing Effect dengan warna animasi
 const text = 'IT Support Specialist — troubleshooting jaringan, hardware, & helpdesk.';
 let i = 0;
 function typing() {
+  const target = document.getElementById('typing');
   if (i < text.length) {
-    document.getElementById('typing').textContent += text.charAt(i);
+    target.textContent += text.charAt(i);
+    target.style.background = `linear-gradient(90deg, #06b6d4 ${(i%100)}%, #818cf8)`;
+    target.style.webkitBackgroundClip = 'text';
+    target.style.webkitTextFillColor = 'transparent';
     i++;
     setTimeout(typing, 40);
   }
 }
 typing();
 
-// 🪄 Scroll Animations
+// 🪄 Scroll Animations (fade + slide)
 const animatedEls = document.querySelectorAll('[data-animate]');
 function animateOnScroll() {
   animatedEls.forEach(el => {

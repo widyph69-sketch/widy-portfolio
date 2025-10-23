@@ -8,22 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <button id="modeToggle" aria-label="Toggle Mode">🌙</button>
   <div class="container">
-    <header class="header">
+    <header class="header" data-animate>
       <img src="assets/avatar.png" alt="Avatar" class="avatar">
       <div>
         <h1>Magi — <span class="accent">IT Support</span></h1>
-        <p class="lead">IT Support Specialist — troubleshooting jaringan, hardware, & helpdesk. Siap bantu setup infrastruktur & maintenance kantor.</p>
+        <p class="lead"><span id="typing"></span></p>
       </div>
     </header>
 
     <main class="content">
-      <section class="about card">
+      <section class="about card" data-animate>
         <h2>Tentang Saya</h2>
-        <p>Saya berpengalaman dalam instalasi jaringan, konfigurasi router, dukungan end-user, serta pemeliharaan server dan workstation. Saya fokus pada solusi cepat, dokumentasi rapi, dan komunikasi jelas.</p>
+        <p>Saya berpengalaman dalam instalasi jaringan, konfigurasi router, dukungan end-user, serta pemeliharaan server dan workstation.</p>
       </section>
 
-      <section class="skills card">
+      <section class="skills card" data-animate>
         <h2>Skill Utama</h2>
         <ul>
           <li>Networking (Mikrotik)</li>
@@ -35,7 +36,7 @@
         </ul>
       </section>
 
-      <section class="projects card">
+      <section class="projects card" data-animate>
         <h2>Proyek & Pengalaman</h2>
         <ul>
           <li><strong>Instalasi jaringan kantor:</strong> LAN, VLAN, konfigurasi Mikrotik, dokumentasi topologi.</li>
@@ -44,7 +45,7 @@
         </ul>
       </section>
 
-      <section class="contact card">
+      <section class="contact card" data-animate>
         <h2>Kontak</h2>
         <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         <p>WhatsApp: <a href="#">Chat sekarang</a></p>
@@ -53,9 +54,10 @@
       </section>
     </main>
 
-    <footer>
-      © 2025 Magi — IT Support • Dibuat dengan HTML & CSS
+    <footer data-animate>
+      © 2025 Magi — IT Support • Dibuat dengan HTML, CSS & JavaScript
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
